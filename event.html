@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="alert('cakri ta ami peye jabo bela sunchio?')">cakri pacho?</button> -->
+    <div id="photo1"></div>
+    <div id="photo2"></div>
+    <button onclick="touch_me()">click me </button>
+
+    
+
+    <script>
+        function touch_me() {
+            let isTriggered = false;
+            const photo1 = document.querySelector("#photo1");
+            photo1.addEventListener('click', function() {
+                if (!isTriggered) {
+                    photo1.innerHTML += '<img src="./images/obito-1.jpeg">';
+                    isTriggered = false;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
